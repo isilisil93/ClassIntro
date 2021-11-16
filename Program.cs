@@ -1,62 +1,67 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
-class Program
+class program
 {
     static void Main(string[] args)
     {
-        string adi = "Engin";
-        int yasi = 36;
+        Proje proje1 = new Proje();
+        proje1.Year = "2020/2021";
+        proje1.Name = "Ataturk Kultur Merkezi";
+        proje1.Position = "Design Architect";
+        proje1.Company = "Sembol Construction";
 
-        Kurs kurs1 = new Kurs();
-        kurs1.KursAdi = "C#";
-        kurs1.Egitmen = "Engin Demiroğ";
-        kurs1.IzlenmeOrani = 68;
-
-        Kurs kurs2 = new Kurs();
-        kurs2.KursAdi = "Java";
-        kurs2.Egitmen = "Ali Durmuş";
-        kurs2.IzlenmeOrani = 60;
-
-        Kurs kurs3 = new Kurs();
-        kurs3.KursAdi = "Python";
-        kurs3.Egitmen = "Veli Can";
-        kurs3.IzlenmeOrani = 80;
-
-        Kurs kurs4 = new Kurs();
-        kurs4.KursAdi = "C++";
-        kurs4.Egitmen = "Damla Tatar";
-        kurs4.IzlenmeOrani = 90;
+        Proje proje2 = new Proje();
+        proje2.Year = "2020/2019";
+        proje2.Name = "Portonovi Middle Village ";
+        proje2.Position = "Design Architect";
+        proje2.Company = "Alp Yapi";
 
 
+        Proje proje3 = new Proje();
+        proje3.Year = "2019/2018";
+        proje3.Name = "Istanbul Airport State Guest House ";
+        proje3.Position = "Architect";
+        proje3.Company = "Alp Yapi";
 
-        //Console.WriteLine(kurs1.KursAdi + " : " + kurs1.Egitmen);
 
-        Kurs[] kurslar = new Kurs[] { kurs1, kurs2, kurs3, kurs4 };
+        Proje proje4 = new Proje();
+        proje4.Year = "2018/2017";
+        proje4.Name = "Istanbul Airport Terminal Baggage Reclaim and Meeters&Greeters Halls ";
+        proje4.Position = "Architect";
+        proje4.Company = "Alp Yapi";
 
-        foreach (var kurs in kurslar)
+        Proje proje5 = new Proje();
+        proje5.Year = "2016/2017";
+        proje5.Name = "Maltepe Piazza Mall, Office and Residence ";
+        proje5.Position = "Junior Design Architect";
+        proje5.Company = "Renaissance Construction";
+
+        Proje proje6 = new Proje();
+        proje6.Year = "2016/Present";
+        proje6.Name = " Mixed Deigns and Examples ";
+        proje6.Position = "Designer";
+        proje6.Company = "Freelance";
+
+
+
+        Proje[] projeler = new Proje[] { proje1, proje2, proje3, proje4, proje5, proje6 };
+
+        foreach (var proje in projeler)
         {
-            //Console.WriteLine(kurs.KursAdi);
-            //Console.WriteLine(kurs.IzlenmeOrani);
+            Console.WriteLine(proje.Year + " - " + proje.Name + " Title " + proje.Position + " " + proje.Company);
 
-            Console.WriteLine(kurs.KursAdi + " : " + kurs.Egitmen + " - İlerleme Seviyesi " + kurs.IzlenmeOrani);
-
-            //Console.WriteLine(kurs1.KursAdi + " : " + kurs1.Egitmen + " - " + "İlerleme Seviyesi:" + kurs1.IzlenmeOrani);
-            //Console.WriteLine(kurs2.KursAdi + " : " + kurs2.Egitmen + " - " + "İlerleme Seviyesi:" + kurs2.IzlenmeOrani);
-            //Console.WriteLine(kurs3.KursAdi + " : " + kurs3.Egitmen + " - " + "İlerleme Seviyesi:" + kurs3.IzlenmeOrani);
         }
-
 
     }
 
+
 }
 
-
-class Kurs
+class Proje
 {
-    public string KursAdi { get; set; }
-    public string Egitmen { get; set; }
-    public int IzlenmeOrani { get; set; }
-
+    public string Year { get; set; }
+    public string Name { get; set; }
+    public string Position { get; set; }
+    public string Company { get; set; }
 }
-
+//Console.WriteLine("Hello, World!");
